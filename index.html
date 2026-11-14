@@ -1,87 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07182d">
-  <meta name="description" content="蓝鲸脉搏 BLUE WHALE PULSE：关注全球AI基础设施、半导体、存储产业链与资本市场。">
-  <meta property="og:title" content="蓝鲸脉搏 | BLUE WHALE PULSE">
-  <meta property="og:description" content="洞察 AI 基础设施，追踪全球科技脉搏。">
-  <title>蓝鲸脉搏 | BLUE WHALE PULSE</title>
-  <style>
-    :root { color-scheme: dark; --bg:#061426; --panel:#0b2038; --blue:#55b8ff; --muted:#a9bfd4; --line:rgba(135,190,235,.18); }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; color:#edf6ff; background:radial-gradient(ellipse at 50% -20%,#16436c 0%,#091c32 42%,var(--bg) 78%); min-height:100vh; }
-    a { color:inherit; text-decoration:none; }
-    .wrap { width:min(1040px, calc(100% - 40px)); margin:auto; }
-    header { padding:26px 0; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
-    .brand { display:flex; gap:12px; align-items:center; font-weight:800; letter-spacing:.08em; }
-    .whale { width:42px; height:42px; display:grid; place-items:center; border:1px solid rgba(85,184,255,.45); border-radius:14px; color:var(--blue); font-size:24px; background:rgba(28,100,155,.18); }
-    .brand small { display:block; color:#8baac5; font-size:10px; letter-spacing:.2em; margin-top:3px; }
-    .lang { color:var(--muted); font-size:13px; }
-    main { padding:76px 0 54px; }
-    .hero { text-align:center; max-width:850px; margin:auto; }
-    .eyebrow { color:var(--blue); font-size:12px; letter-spacing:.24em; font-weight:700; }
-    h1 { font-size:clamp(36px,7vw,68px); line-height:1.12; margin:20px 0 15px; letter-spacing:-.04em; }
-    h1 span { color:var(--blue); }
-    .lead { font-size:clamp(17px,2.5vw,22px); color:#c2d6e8; line-height:1.7; margin:0 auto; }
-    .sublead { max-width:700px; margin:18px auto 0; color:var(--muted); line-height:1.9; font-size:15px; }
-    .actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:32px; }
-    .btn { padding:13px 22px; border-radius:999px; border:1px solid rgba(85,184,255,.5); font-weight:700; font-size:14px; }
-    .btn.primary { background:linear-gradient(135deg,#1686ce,#45b5ff); color:#041426; border:0; }
-    .section-title { margin:68px 0 22px; font-size:20px; }
-    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-    .card { background:linear-gradient(145deg,rgba(14,42,69,.92),rgba(8,27,47,.88)); border:1px solid var(--line); border-radius:18px; padding:23px; min-height:145px; }
-    .num { color:var(--blue); font-size:11px; letter-spacing:.15em; font-weight:800; }
-    h2 { font-size:18px; margin:12px 0 8px; }
-    .card p { margin:0; color:var(--muted); line-height:1.75; font-size:14px; }
-    .about { margin-top:20px; padding:25px; border:1px solid var(--line); border-radius:18px; background:rgba(8,28,48,.65); }
-    .about p { color:var(--muted); line-height:1.9; margin:8px 0 0; }
-    footer { border-top:1px solid var(--line); color:#829bb3; padding:24px 0 34px; font-size:12px; text-align:center; }
-    @media(max-width:640px) { main{padding-top:54px}.grid{grid-template-columns:1fr}.section-title{margin-top:48px}.card{min-height:unset} }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#061426">
+<meta name="description" content="蓝鲸脉搏 BLUE WHALE PULSE，独立观察全球 AI 基础设施、半导体、存储、光通信与科技资本市场。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="蓝鲸脉搏 | BLUE WHALE PULSE">
+<meta property="og:description" content="洞察 AI 基础设施，追踪全球科技脉搏。">
+<title>蓝鲸脉搏 | BLUE WHALE PULSE</title>
+<style>
+:root{--bg:#061426;--panel:#0b2038;--blue:#5bc0ff;--cyan:#8de4ff;--muted:#a9bfd4;--line:rgba(133,190,235,.18);--white:#eff8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -18%,#174b76 0%,#0a2038 38%,var(--bg) 76%);color:var(--white);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.06em}.mark{width:44px;height:44px;border:1px solid rgba(91,192,255,.5);border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(40,142,207,.28),rgba(4,20,38,.5));box-shadow:0 0 28px rgba(48,159,230,.12);font-size:24px}.brand small{display:block;color:#8fb5d3;font-size:9px;letter-spacing:.22em;margin-top:4px}.nav{display:flex;gap:25px;color:#b8ccdf;font-size:13px}.nav a:hover{color:var(--cyan)}
+.hero{padding:88px 0 72px;text-align:center;position:relative}.eyebrow{font-size:11px;letter-spacing:.25em;color:var(--blue);font-weight:800}.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.12;letter-spacing:-.045em;margin:22px 0 17px}.hero h1 span{background:linear-gradient(90deg,#62c7ff,#b2edff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero .en{font-size:clamp(16px,2.5vw,21px);color:#c5d9e9;line-height:1.6}.hero .desc{max-width:720px;margin:18px auto 0;color:var(--muted);font-size:15px;line-height:1.95}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border:1px solid rgba(91,192,255,.42);border-radius:999px;font-weight:700;font-size:13px;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:var(--cyan)}.btn.primary{background:linear-gradient(120deg,#168bd2,#68ccff);color:#041426;border:0}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 auto 12px;max-width:780px}.metric{padding:17px 10px;border:1px solid var(--line);border-radius:15px;background:rgba(9,31,53,.55)}.metric strong{display:block;color:var(--cyan);font-size:18px;letter-spacing:.03em}.metric span{display:block;color:#9eb5ca;font-size:11px;margin-top:5px;letter-spacing:.08em}
+section.content{padding:22px 0 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:42px 0 20px}.section-head h2{font-size:21px;margin:0}.section-head p{font-size:11px;color:#83a9c7;letter-spacing:.16em;margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{padding:23px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(15,47,76,.88),rgba(7,26,46,.9));min-height:150px;transition:.2s}.card:hover{border-color:rgba(91,192,255,.48);transform:translateY(-2px)}.card .n{color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.17em}.card h3{font-size:18px;margin:13px 0 8px}.card p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}
+.statement{margin:18px 0 0;padding:27px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(110deg,rgba(15,55,87,.72),rgba(7,25,44,.72))}.statement .tag{font-size:10px;color:var(--blue);letter-spacing:.2em;font-weight:800}.statement h2{font-size:20px;margin:12px 0}.statement p{color:var(--muted);font-size:14px;line-height:1.9;margin:0}
+.connect{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:18px 0 64px;padding:25px;border:1px solid rgba(91,192,255,.26);border-radius:18px;background:rgba(8,30,51,.72)}.connect h2{font-size:18px;margin:0 0 7px}.connect p{color:var(--muted);font-size:13px;margin:0;line-height:1.7}
+footer{border-top:1px solid var(--line);padding:25px 0 34px;text-align:center;color:#829bb3;font-size:11px;line-height:1.9}
+@media(max-width:680px){.nav{gap:13px;font-size:11px}.hero{padding:62px 0 52px}.grid{grid-template-columns:1fr}.metrics{gap:7px}.metric{padding:14px 5px}.metric strong{font-size:15px}.metric span{font-size:9px}.section-head{align-items:start;flex-direction:column;gap:7px}.connect{align-items:flex-start;flex-direction:column}}
+@media(max-width:420px){.nav a:nth-child(2){display:none}.wrap{width:min(100% - 28px,1080px)}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="#">
-        <span class="whale">🐋</span>
-        <span>蓝鲸脉搏<small>BLUE WHALE PULSE</small></span>
-      </a>
-      <div class="lang">AI · TECH · MARKETS</div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="eyebrow">GLOBAL TECHNOLOGY & MARKET INSIGHTS</div>
-        <h1>洞察 AI 基础设施，<br><span>追踪全球科技脉搏。</span></h1>
-        <p class="lead">Independent perspectives on the infrastructure powering the AI era.</p>
-        <p class="sublead">蓝鲸脉搏关注全球人工智能基础设施、半导体、存储产业链与资本市场，持续追踪技术演进、产业变化及其投资影响。</p>
-        <div class="actions">
-          <a class="btn primary" href="https://x.com/Chen156537" target="_blank" rel="noopener noreferrer">关注蓝鲸脉搏 · Follow on X</a>
-          <a class="btn" href="#focus">探索关注领域 · Explore</a>
-        </div>
-      </section>
-
-      <section id="focus">
-        <h2 class="section-title">关注领域 <span style="color:#75bfff;font-size:13px;font-weight:500">/ AREAS OF FOCUS</span></h2>
-        <div class="grid">
-          <article class="card"><div class="num">01 / AI INFRASTRUCTURE</div><h2>AI 基础设施</h2><p>GPU、算力集群、数据中心、电力与高速网络，观察 AI 产业扩张背后的基础设施需求。</p></article>
-          <article class="card"><div class="num">02 / MEMORY & STORAGE</div><h2>存储与半导体</h2><p>HBM、DRAM、NAND、先进封装及存储供应链，追踪技术迭代与供需周期。</p></article>
-          <article class="card"><div class="num">03 / NETWORKING & OPTICS</div><h2>网络与光通信</h2><p>高速互联、光模块、光纤与数据中心网络，关注 AI 集群规模化带来的连接需求。</p></article>
-          <article class="card"><div class="num">04 / GLOBAL MARKETS</div><h2>全球资本市场</h2><p>美股、A股及全球科技公司，连接产业趋势、公司表现与市场定价。</p></article>
-        </div>
-      </section>
-
-      <section class="about">
-        <div class="eyebrow">ABOUT BLUE WHALE PULSE</div>
-        <h2>独立观点 · 产业洞察 · 全球视野</h2>
-        <p>蓝鲸脉搏是一个聚焦 AI 科技产业与资本市场的独立观察账号。我们关注的不只是热门概念，更是技术落地、产业链价值分配、供需变化与长期趋势。</p>
-        <p>Blue Whale Pulse explores the technologies, companies and market forces shaping the global AI infrastructure ecosystem.</p>
-      </section>
-    </main>
-
-    <footer>© <span id="year">2026</span> BLUE WHALE PULSE · 蓝鲸脉搏<br><span style="display:inline-block;margin-top:8px">观点仅用于信息交流，不构成投资建议。</span></footer>
-  </div>
+<div class="wrap">
+<header>
+<a class="brand" href="#">
+<span class="mark">🐋</span><span>蓝鲸脉搏<small>BLUE WHALE PULSE</small></span>
+</a>
+<nav class="nav"><a href="#focus">关注领域</a><a href="#about">关于我们</a><a href="https://x.com/Chen156537" target="_blank" rel="noopener">X / Twitter ↗</a></nav>
+</header>
+<main>
+<section class="hero">
+<div class="eyebrow">GLOBAL TECHNOLOGY · INDUSTRY · MARKETS</div>
+<h1>洞察 AI 基础设施，<br><span>追踪全球科技脉搏。</span></h1>
+<div class="en">Independent perspectives on the infrastructure powering the AI era.</div>
+<p class="desc">蓝鲸脉搏聚焦全球人工智能基础设施、半导体、存储产业链、光通信与资本市场。<br>从技术演进到产业链变化，从公司基本面到市场定价，持续追踪科技浪潮背后的关键变量。</p>
+<div class="actions"><a class="btn primary" href="https://x.com/Chen156537" target="_blank" rel="noopener">关注蓝鲸脉搏 · Follow on X ↗</a><a class="btn" href="#focus">探索关注领域 ↓</a></div>
+</section>
+<div class="metrics">
+<div class="metric"><strong>AI</strong><span>INFRASTRUCTURE</span></div>
+<div class="metric"><strong>CHIPS</strong><span>SEMICONDUCTORS & MEMORY</span></div>
+<div class="metric"><strong>MARKETS</strong><span>GLOBAL CAPITAL MARKETS</span></div>
+</div>
+<section class="content" id="focus">
+<div class="section-head"><h2>核心关注领域</h2><p>AREAS OF FOCUS</p></div>
+<div class="grid">
+<article class="card"><div class="n">01 / AI INFRASTRUCTURE</div><h3>AI 基础设施</h3><p>GPU、算力集群、数据中心、电力与高速网络，关注 AI 产业扩张背后的基础设施需求与投资机会。</p></article>
+<article class="card"><div class="n">02 / MEMORY & STORAGE</div><h3>存储与半导体</h3><p>HBM、DRAM、NAND、先进封装及供应链周期，追踪技术迭代、产能变化与供需格局。</p></article>
+<article class="card"><div class="n">03 / NETWORKING & OPTICS</div><h3>网络与光通信</h3><p>高速互联、光模块、光纤与数据中心网络，观察 AI 集群规模化带来的带宽和连接需求。</p></article>
+<article class="card"><div class="n">04 / GLOBAL MARKETS</div><h3>全球资本市场</h3><p>美股、A股及全球科技公司，连接产业趋势、企业表现、估值变化与市场预期。</p></article>
+</div>
+</section>
+<section class="statement" id="about">
+<div class="tag">ABOUT BLUE WHALE PULSE</div>
+<h2>独立观点 · 产业洞察 · 全球视野</h2>
+<p>蓝鲸脉搏是一个聚焦 AI 科技产业与资本市场的独立观察品牌。我们关注的不只是热门概念，更关注技术是否落地、产业链价值如何分配、供需关系如何变化，以及这些变化将如何影响全球市场。</p>
+</section>
+<section class="connect">
+<div><h2>关注蓝鲸脉搏的持续更新</h2><p>获取 AI 基础设施、半导体、存储产业链与全球科技市场的最新观察。</p></div>
+<a class="btn primary" href="https://x.com/Chen156537" target="_blank" rel="noopener">在 X 上关注 ↗</a>
+</section>
+</main>
+<footer>© 2026 BLUE WHALE PULSE · 蓝鲸脉搏<br>独立观点 · 产业洞察 · 全球视野<br>本文内容仅用于信息交流，不构成投资建议。</footer>
+</div>
 </body>
 </html>
